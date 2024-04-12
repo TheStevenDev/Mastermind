@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/aceh" rel="stylesheet">
+                
+    <script src="script.js"></script>
+
+    <title>Mastermind</title>
+</head>
+<body onload="configure()">
+    <div class="container">
+        <div class="alert-box" id="alert">MISSING COLORS!</div>
+
+        <div class="title-container">
+            <div class="subtitle-container">
+                <h1>MasterMind</h1>
+                <h5>Steven Damore</h5>
+            </div>
+        </div>
+    
+        <div class="main-game-container">
+            <div class="game-container">
+                <div class="soluzione">
+                    <div class="soluzione-div">?</div>
+                    <div class="soluzione-div">?</div>
+                    <div class="soluzione-div">?</div>
+                    <div class="soluzione-div">?</div>
+                </div>
+    
+            <!--TABELLA CON RISULTATI-->
+
+            <div class="table-container">
+                <table id="table">
+                    <tbody>
+                        <tr class="row-content">
+                        
+                            <td><div class="color-item" id="first"></div></td>
+                            <td><div class="color-item" id="second"></div></td>
+                            <td><div class="color-item" id="third"></div></td>
+                            <td><div class="color-item" id="fourth"></div></td>
+    
+                            <td class="result-containter">
+                                <div class="result-box">
+                                    <div class="result-item"></div>
+                                    <div class="result-item"></div>
+                                    <div class="result-item"></div>
+                                    <div class="result-item"></div>
+                                </div>
+                            </td>
+    
+                            
+                        </tr>
+                    
+                    </tbody>
+                </table>
+    
+            </div>
+    
+            <div class="color-container">
+                <div class="color-box" draggable="true" id="1"></div>
+                <div class="color-box" draggable="true" id="2"></div>
+                <div class="color-box" draggable="true" id="3"></div>
+                <div class="color-box" draggable="true" id="4"></div>
+                <div class="color-box" draggable="true" id="5"></div>
+                <div class="color-box" draggable="true" id="6"></div>
+                
+            </div>
+    
+            <div class="button-container">
+                <button class="submit-button" id="submit">Check</button>
+            </div>
+
+        </div>
+    
+    </div>
+    
+</body>
+</html>

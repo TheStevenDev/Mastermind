@@ -1,0 +1,260 @@
+/* BACKGROUND */
+body{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+.container{
+    width: 900px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+/* TITLE */
+
+.title-container{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    h1{
+        font-size: 45px;
+    }
+    h5{
+        margin-top: -30px;
+        font-weight: lighter;
+        font-family: Helvetica, sans-serif;
+    }
+
+    font-family: 'Aceh', sans-serif;
+
+}
+
+/* GAME */
+
+.main-game-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    width: 600px;
+}
+
+.soluzione{
+    display: flex;
+    justify-content: space-around;
+
+    width: 200px;
+
+    .soluzione-div{
+        width: 35px;
+        height: 35px;
+        margin: 3px;
+        border-radius: 50%;
+
+      
+        text-align: center;
+        align-content: center;
+
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        color: #06bFF1;
+        text-shadow: 1px 1px white ;
+        font-weight: bold;
+        font-size: 15px;
+        font-family: 'Aceh', sans-serif;
+    }
+
+}
+
+/* TABLE */
+
+.table-container{
+    display: flex;
+    justify-content: center;
+
+    table{
+        width: 200px;
+        margin-top: 20px;
+    
+
+       .result-containter{
+            width: 80%;
+            display: flex;
+            justify-content: right;
+       }
+        
+        .color-item{
+            width: 25px;
+            height: 25px;
+            margin: 2px;
+
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: tan;
+        }
+
+        .result-box{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1px;
+
+            margin-top: 2px;
+
+
+            .result-item{
+                width: 10px;
+                height: 10px;
+                border: 2px solid black;
+                background-color: lightblue;
+                border-radius: 50%;
+            }
+
+        }
+
+    }
+
+}
+
+/* COLORS */
+
+.color-container{
+    margin-top: 25px;
+    width: 200px;
+
+    background-color: transparent;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.color-box{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    border-radius: 5px;
+    border: 1px solid darkslategrey;
+    cursor: pointer;
+}
+
+.color-box:nth-child(1){
+    background-color: red;
+}
+.color-box:nth-child(2){
+    background-color: yellow;
+}
+
+.color-box:nth-child(3){
+    background-color: green;
+}
+
+.color-box:nth-child(4){
+    background-color: blue;
+}
+
+.color-box:nth-child(5){
+    background-color: white;
+}
+
+.color-box:nth-child(6){
+    background-color: gray;
+}
+
+
+/* SUBMIT */
+
+.button-container{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.submit-button{
+    border: none;
+    background-color: transparent;
+    
+    
+    color: black;
+    font-family: 'Aceh', sans-serif;                                      
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 23px;
+   
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    transform: scale(1.2);
+ 
+}
+
+/* RESULTS & ALERTS */
+.alert-box{
+    display: none; /*flex*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    width: 400px;
+    height: 200px;
+    margin-top: 15px;
+    z-index: 1;
+    
+    background-color: orangered;
+    border-radius: 20px;
+
+    font-family: 'Aceh', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+.alert-box{
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; 
+    }
+    25% {
+        opacity: 1; 
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0; 
+    }
+}

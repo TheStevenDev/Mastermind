@@ -9,6 +9,7 @@ function riempiArray(){
 
     /*
         COLORS:
+
         1 -> red
         2 -> yellow
         3 -> green
@@ -75,6 +76,7 @@ function configure(){
 
     for(color of myColors){
         color.addEventListener("dragstart",dragStartEvent);
+        color.addEventListener("touchstart",touchStartEvent);
     }
 
 
@@ -91,6 +93,10 @@ function configure(){
 //EVENTS
 
 function dragStartEvent(e) {
+    selected = e.target.id;
+}
+
+function touchStartEvent(e) {
     selected = e.target.id;
 }
 
